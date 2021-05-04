@@ -1,0 +1,9 @@
+* {
+  font-family: Arial, Helvetica, sans-serif; text-align: center;
+}
+h1 {
+  font-size: 26px;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif; font-size: 20px; text-align: left; background-image: url('./background-image/background-image.jpg');
+}
