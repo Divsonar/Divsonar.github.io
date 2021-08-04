@@ -6,8 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../main.css">
     <link rel="stylesheet" href="../bootstrap.min.css">
+    <script src="../bootstrap.min.js"></script>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script src="../popper.min.js"></script>
     <title>FindArcade by Divsonar</title>
     <script src="../Sorting/sorttable.js"></script>
+<script>
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  const uluru = { lat: 1.303618958250836, lng: 103.87379356136826};
+  // The map, centered at Uluru
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 13,
+    center: uluru,
+  });
+  // The marker, positioned at Uluru
+  const marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+  });
+}
+</script>
   </head>
   <body>
     <div class="container">
@@ -23,38 +43,49 @@
       <a class="nav-item nav-link text-danger" href="../groovecoaster.html">Groove Coaster</a>
       <a class="nav-item nav-link text-danger" href="../about.html">About</a>
     </nav>
-
-    <div class=infocontent>
-      <h1 class="title12">Paco Funworld Kallang Wave Mall</h1>
-      <img src="./locationspicture/id1.jpeg" alt="Paco Funworld" height="250px" class="title1"></img>
-      <table>
-        <tr>
-          <th class="title12" width="100px">Location ID</th>
-          <th class="title12" width="100px">Google Maps Link</th>
-        </tr>
-        <tr>
-          <td class="title12">1</td>
-          <td class="title12"><a href="https://goo.gl/maps/J86MM84a4rdh8B378">Link</td>
-        </tr>
-      </table>
-      <br>
-      <table>
-        <tr>
-          <th class="title12" width="100px">Games available</th>
-          <th class="title12" width="100px">Number of machines</th>
-        </tr>
-        <tr>
-          <td class="title12">WMMT6</td>
-          <td class="title12">8</td>
-        </tr>
-        <tr>
-          <td class="title12">MaiMai</td>
-          <td class="title12">8</td>
-        </tr>
-      </table>
-    </div>
   </section>
 </div>
 </div>
+
+
+
+
+
+
+
+
+
+      <img src="./locationspicture/id1.jpeg" alt="Paco Funworld" width="400px" class="mainimg"></img>
+      <img src="./locationspicture/pacofunworldmaimai.png" alt="Paco Funworld Machine" width="400px" class="mainimg"></img>
+      <div id="map" class="title1"></div>
+      <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6PpUR9f-e7eGcvVM2roK8ROicGV3UDbI&callback=initMap&libraries=&v=weekly"
+        async
+      ></script>
+      <br>
+      <hr>
+      <br>
+      <table id="table11">
+        <tr>
+          <th class="top11 text-info" width="100px">Location ID</th>
+          <th class="top11 text-info" width="100px">Google Maps Link</th>
+        </tr>
+        <tr>
+          <td class="top11">1</td>
+          <td class="top11"><a href="https://goo.gl/maps/J86MM84a4rdh8B378">Link</td>
+        </tr>
+      </table>
+      <br>
+      <table id="table11">
+        <tr>
+          <th class="top11 text-info" width="100px">Games available</th>
+          <th class="top11 text-info" width="100px">Number of machines</th>
+        </tr>
+        <tr>
+          <td class="top11">MaiMai</td>
+          <td class="top11">8</td>
+        </tr>
+      </table>
+    </div>
   </body>
 </html>
