@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="bootstrap.min.css">
     <title>FindArcade by Divsonar</title>
     <script src="Sorting\sorttable.js"></script>
+    <script>
+      function results() {
+        var name= document.getElementById("name").value;
+        var email= document.getElementById("email").value;
+        var message= document.getElementById("message").value;
+
+        document.getElementById("theformreply").innerHTML = ("<p><p>Thank you for submitting your inquiries.</p>" + "<hr><p>Your Name:<p>" + name + "<hr><p>Your Email:<p>" + email + "<hr><p>Your Message:<p>" + message)
+      }
+    </script>
   </head>
   <body>
     <div class="container">
@@ -26,13 +35,30 @@
     <div class="title12">
     <br>
     FindArcade Singapore is a Project made by Divsonar to compile different locations of arcades all in one place for easy access to anyone who is interested in playing arcade games or joining the arcade gaming community.<br>
-    Most of the information on the database are thanks to contributors within the community - if you would like to help contribute please contact FindArcade directly:
+    Most of the information on the database are thanks to contributors within the community - if you would like to help contribute please contact FindArcade directly, or by entering the form below:
 
 
     <br>
     <br>
     Instagram: @<a href="https://www.instagram.com/findarcade/">FindArcade</a><br>
     Email: findarcade@protonmail.com
+    <br>
+    </div>
+    <form onsubmit="return results();" method="post">
+      Enter Name:
+      <br>
+      <input id="name" type="text" name="name"></input>
+      <br>
+      Enter Email:
+      <br>
+      <input id="email" type="email" name="email"></input>
+      <br>
+      Leave your inquiries or questions:<br>
+      <textarea id="message" name="message" rows="5"></textarea>
+      <button id="submit" type="button" onclick="results()">Submit Inquiry</button>
+    </form>
+    <div id=theformreply>
+
     </div>
     <br>
     <br>
